@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        tools:targetApi="lollipop" >
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:src="@drawable/title"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginStart="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="100dp"
+                app:cardCornerRadius="7dp">
+
+                <ImageView
+                    android:id="@+id/random_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:id="@+id/wallpaper_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/click_effect"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true">
+                <ImageButton
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/angle_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/click_effect_circular"
+                    android:src="@drawable/ic_crop_rotate" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Angle"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginEnd="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true">
+
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="#fff"
+                    android:background="@drawable/click_effect_circular" />
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#fff" />
+
+                <View
+                    android:id="@+id/extra_top_color_view"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/random_top" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    app:cardCornerRadius="19dp"
+                    android:layout_margin="1dp"
+                    app:cardElevation="0dp">
+
+                    <ImageButton
+                        android:id="@+id/top_color_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/random" />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginEnd="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true">
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="#fff"
+                    android:background="@drawable/click_effect_circular" />
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#fff" />
+
+                <View
+                    android:id="@+id/extra_bottom_color_view"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_marginEnd="19dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/random_bottom" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="38dp"
+                    android:layout_margin="1dp"
+                    android:layout_height="38dp"
+                    app:cardCornerRadius="19dp"
+                    app:cardElevation="0dp">
+
+                    <ImageButton
+                        android:id="@+id/bottom_color_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/random" />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <ImageButton
+            android:id="@+id/refresh_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/click_effect_circular"
+            android:src="@drawable/ic_autorenew" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:text="Refresh to get a new wallpaper"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>
