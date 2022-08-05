@@ -1,5 +1,8 @@
-# Gradient Solid Wallpaper - Android (Feb, 2020)
-Random Gradient Generated based Wallpaper App
+# Gradient Random Wallpaper - Android
+Generated Random Gradient Image based Wallpaper App for Android.
+
+
+## Screenshots
 
 <p float="left" align="center">
     <img src="screenshots/rec.gif" width="220"/>
